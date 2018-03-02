@@ -13,10 +13,9 @@ export class StatusComponent implements OnInit {
   constructor(private ps:PaymentsService ) { }
 
   getStatus():void  {
-    //this.message = this.ps.getPayments();
     console.log('inside getStatus');
-    //this.ps.getPayments().subscribe(msg => console.log(msg)); 
-    this.ps.getPayments().subscribe(msg => this.message = msg.name);
+    //this.ps.getPayments().subscribe(msg => this.message = msg.name);
+    this.message = "yohoo";
   }
   
   ngOnInit() {

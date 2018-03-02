@@ -13,6 +13,6 @@ export class PaymentsService {
 
   getPayments(): Observable<Message>{
     console.log('inside payments service - getPayments()');
-    return this.http.get<Message>(this.url);
+    return this.http.get<Message>(this.url);    
   }
 }
