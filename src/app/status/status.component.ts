@@ -8,19 +8,21 @@ import { PaymentsService } from '../payments.service';
 })
 export class StatusComponent implements OnInit {
 
-  private message:string = "";
+  message:string = "";
+  //ipAddress:string = "151.101.128.81";
+  ipAddress:string = "";
 
   constructor(private ps:PaymentsService ) { }
 
   getStatus():void  {
     console.log('inside getStatus');
-    //this.ps.getPayments().subscribe(msg => this.message = msg.name);
-    this.message = "yohoo";
+    this.ps.getPayments(this.ipAddress).subscribe(msg => this.message = msg.country);
+    //this.message = "yohoo";
   }
   
   ngOnInit() {
     console.log('inside ngOnInit');
-    this.getStatus();
+    //this.getStatus();
   }
 
 }

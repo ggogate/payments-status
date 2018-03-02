@@ -1,4 +1,5 @@
-<p>
-  status works!
-  {{message}}
+<p>  
+  Enter IP address and press enter: <input [(ngModel)]="ipAddress" type="text" width="10" (keyup.enter)="getStatus()">
+  <!--<button (click)="getStatus()">Get</button>-->
+  <br> Country: {{message}}
 </p>
